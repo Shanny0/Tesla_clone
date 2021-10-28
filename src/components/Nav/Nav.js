@@ -22,14 +22,13 @@ export default function Nav() {
             <li>RICARICA</li>
           </ul>
         </Navlist>
-
         <Shop>
           <ul className="linknav">
             <li className=" hideMob shop">Shop</li>
             <li className=" hideMob AccountTesla">Account Tesla</li>
             <li>
               <i
-                class="fas fa-bars"
+                class="fas fa-bars hamicon"
                 onClick={() => {
                   document.getElementsByClassName("hide")[0].style.display =
                     "block";
@@ -38,7 +37,6 @@ export default function Nav() {
             </li>
           </ul>
         </Shop>
-
         <Sidebar className="hide">
           <i
             class="fas fa-times"
@@ -64,10 +62,8 @@ const Container = styled.div`
   z-index: 9999;
   width: 100%;
   padding: 5px 20px;
-
   display: Flex;
   justify-content: space-between;
-
   position: fixed;
   top: 0;
   width: 100%;
@@ -109,17 +105,22 @@ const Shop = styled.div`
     list-style-type: none;
     display: flex;
   }
+  .hamicon{
+      display:none
+    }
 
   @media only screen and (max-width: 900px) {
     .hideMob {
       display: none;
+    }
+    .hamicon{
+      display:block;
     }
   }
 `;
 
 const Sidebar = styled.div`
   display: none;
-
   list-style: none;
   background-color: white;
   position: absolute;
@@ -131,7 +132,6 @@ const Sidebar = styled.div`
 
   .fas {
     display: flex;
-
     justify-content: flex-end;
     cursor: pointer;
   }
