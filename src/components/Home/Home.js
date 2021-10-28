@@ -23,7 +23,6 @@ function Home(props) {
           </ButtonZone>
           <Paraandarrow>
             <p className="downpara">{props.paradown}</p>
-           
           </Paraandarrow>
         </Downcontainer>
       </Container>
@@ -32,7 +31,6 @@ function Home(props) {
 }
 
 const Container = styled.div`
-  
   font-family: "Roboto";
   width: 100vw;
   height: 110vh;
